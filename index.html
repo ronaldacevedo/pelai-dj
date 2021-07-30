@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Pelai DJ</title>
+		<link rel="stylesheet" type="text/css" href="controller.css" />
+	</head>
+	<body>
+		<h1>Pelai DJ</h1>
+		<div id="controller" class="controller">
+			<div id="deck1" class="deck">
+				<input id="deck1searchbox" type="text">
+				<p id="deck1title"</p>
+				<img id="deck1art" class="deckart" src="images/noart.png" />
+				<div class="deckcontrols">
+					<button id="d1playbutton" class="play"></button>
+					<div class="horizontal-slider">
+						<label for="d1tempofader">Tempo <span id="d1tempovalue"></span></label><br />
+						<input id="d1tempofader" type="range" min="0.9" max="1.1" step="0.005" value="1.0" />
+					</div>
+				</div>
+			</div>
+			<div id="mixer" class="mixer">
+				<div class="gains">
+					<div class="vertical-slider">
+						<label for="deck1gain">Deck 1</label><br />
+						<input id="deck1gain" type="range" min="0.0" max="1.0" step="0.05" value="0.8" />
+					</div>
+					<div class="vertical-slider">
+						<label for="mastergain">Master</label><br />
+						<input id="mastergain" type="range" min="0.0" max="1.0" step="0.05" value="0.8" />
+					</div>
+					<div class="vertical-slider">
+						<label for="deck2gain">Deck 2</label><br />
+						<input id="deck2gain" type="range" min="0.0" max="1.0" step="0.05" value="0.8" />
+					</div>
+				</div>
+				<label for="crossfader">Crossfader</label><br />
+				<input id="crossfader" type="range" min="0.0" max="1.0" step="0.05" value="0.5" />
+			</div>
+			<div id="deck2" class="deck">
+				<img id="deck2art" class="deckart" src="images/noart.png" />
+				<div class="deckcontrols">
+					<button id="d2playbutton" class="play"></button>
+					<div class="temposlider">
+						<label for="d2tempofader">Tempo <span id="d2tempovalue"></span></label><br />
+						<input id="d2tempofader" type="range" min="0.9" max="1.1" step="0.005" value="1.0" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="howler.core.js"></script>
+		<script src="controller.js"></script>
+		<script src="search.js"></script>
+	</body>
+</html>

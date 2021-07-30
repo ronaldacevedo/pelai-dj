@@ -1,0 +1,28 @@
+div.controller {
+	width: 100%;
+	border: 1px solid black;
+	display: inline-flex;
+}
+div.deck {
+	border: 1px solid red;
+	flex: 1;
+}
+img.deckart {
+	display: block;
+	margin: 5px auto;
+}
+div.deckcontrols {
+	display: inline-flex;
+}
+div.deckcontrols div {
+	margin: 0 2px;
+}
+div.mixer {
+	border: 1px solid blue;
+	flex: 1;
+}
+button.play {
+	background-image: url("images/playbutton.png");
+	width: 50px;
+	height: 50px;
+}
