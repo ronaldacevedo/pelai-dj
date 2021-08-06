@@ -7,9 +7,26 @@ div.deck {
 	border: 1px solid red;
 	flex: 1;
 }
-img.deckart {
+p.decktitle {
+	margin: 10px 0;
+	text-align: center;
+}
+div.discart {
 	display: block;
 	margin: 5px auto;
+	height: 300px;
+	width: 300px;
+	border-radius: 150px;
+	background-color: #434343;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+input.dropbox {
+	height: 294px;
+	width: 292px;
+	border-radius: 150px;
+	opacity: 0;
+	cursor: default;
 }
 div.deckcontrols {
 	display: inline-flex;
@@ -22,7 +39,7 @@ div.mixer {
 	flex: 1;
 }
 button.play {
-	background-image: url("images/playbutton.png");
+	background-image: url("/images/playbutton.png");
 	width: 50px;
 	height: 50px;
 }

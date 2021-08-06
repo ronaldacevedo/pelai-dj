@@ -4,15 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Pelai DJ</title>
-		<link rel="stylesheet" type="text/css" href="controller.css" />
+		<link rel="stylesheet" type="text/css" href="css/controller.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
 	</head>
 	<body>
 		<h1>Pelai DJ</h1>
 		<div id="controller" class="controller">
 			<div id="deck1" class="deck">
-				<input id="deck1searchbox" type="text">
-				<p id="deck1title"</p>
-				<img id="deck1art" class="deckart" src="images/noart.png" />
+				<p id="deck1title"></p>
+				<div id="deck1disc" class="discart">
+					<input id="deck1search" type="text" class="dropbox" />
+				</div>
 				<div class="deckcontrols">
 					<button id="d1playbutton" class="play"></button>
 					<div class="horizontal-slider">
@@ -40,7 +42,10 @@
 				<input id="crossfader" type="range" min="0.0" max="1.0" step="0.05" value="0.5" />
 			</div>
 			<div id="deck2" class="deck">
-				<img id="deck2art" class="deckart" src="images/noart.png" />
+				<p id="deck2title"></p>
+				<div id="deck2disc" class="discart">
+					<input id="deck2search" type="text" class="dropbox" />
+				</div>
 				<div class="deckcontrols">
 					<button id="d2playbutton" class="play"></button>
 					<div class="temposlider">
@@ -50,8 +55,9 @@
 				</div>
 			</div>
 		</div>
-		<script src="howler.core.js"></script>
-		<script src="controller.js"></script>
-		<script src="search.js"></script>
+		<script src="js/howler.core.js"></script>
+		<script src="js/controller.js"></script>
+		<script src="js/search.js"></script>
+		<!-- <script src="js/drophandler.js"></script> -->
 	</body>
 </html>

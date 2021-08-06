@@ -3,10 +3,14 @@
 let deck1out;
 const deck1playbutton = document.querySelector("#d1playbutton");
 const deck1tempofader = document.querySelector("#d1tempofader");
+const deck1art = document.querySelector("#deck1disc");
+const deck1title = document.querySelector("#deck1title");
 // deck 2
 let deck2out;
 const deck2playbutton = document.querySelector("#d2playbutton");
 const deck2tempofader = document.querySelector("#d2tempofader");
+const deck2art = document.querySelector("#deck2disc");
+const deck2title = document.querySelector("#deck2title");
 // mixer
 let masterout;
 const deck1gainfader = document.querySelector("#deck1gain");
@@ -15,7 +19,7 @@ const crossfader = document.querySelector("#crossfader");
 const masteroutfader = document.querySelector("#mastergain");
 
 
-function loadDeck1(audioUrl) {
+function loadDeck1(title, audioUrl, imageUrl) {
 	if (deck1out != undefined) {
 		deck1out.unload();
 	}
@@ -33,9 +37,12 @@ function loadDeck1(audioUrl) {
 	deck1tempofader.oninput = function() {
 		deck1out.rate(deck1tempofader.value)
 	}
+	deck1art.style.backgroundImage = "url(" + imageUrl + ")";
+	deck1title.innerText = title;
+	updateVolumes();
 }
 
-function loadDeck2(audioUrl) {
+function loadDeck2(title, audioUrl, imageUrl) {
 	if (deck2out != undefined) {
 		deck2out.unload();
 	}
@@ -51,8 +58,11 @@ function loadDeck2(audioUrl) {
 		}
 	}
 	deck2tempofader.oninput = function() {
-		deck2out.rate(deck1tempofader.value)
+		deck2out.rate(deck2tempofader.value)
 	}
+	deck2art.style.backgroundImage = "url(" + imageUrl + ")";
+	deck2title.innerText = title;
+	updateVolumes();
 }
 
 /* mixer */
@@ -69,7 +79,3 @@ deck1gainfader.oninput = updateVolumes;
 deck2gainfader.oninput = updateVolumes;
 crossfader.oninput = updateVolumes;
 masteroutfader.oninput = updateVolumes;
-
-loadDeck1("taximan.ogg");
-loadDeck2("juggler.ogg");
-updateVolumes();
